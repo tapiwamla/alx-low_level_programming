@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * The main function
- * Almost failed this
+ * main - entry point
+ * Return: 0 (success)
  */
 int main(void)
 {
