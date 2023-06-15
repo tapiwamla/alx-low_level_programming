@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * The main function
  * Almost failed this
  */
