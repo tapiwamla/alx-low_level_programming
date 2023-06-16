@@ -1,0 +1,7 @@
+#include <stdio.h>
+/**
+ * main - program entry point
+ * return: 0
+ * description: print 0-9
+ */
+int main(void)
