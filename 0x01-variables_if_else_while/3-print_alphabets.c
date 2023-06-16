@@ -4,7 +4,7 @@
   * Return: 0 (success)
   * Description: A program that prints all letters of the alphabet
   */
-int main()
+int main(void)
 {
 char lower;
 char upper;
