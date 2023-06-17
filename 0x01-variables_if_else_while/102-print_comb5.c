@@ -1,23 +1,33 @@
 #include <stdio.h>
 /**
- * main - program entry point
- * Return: 0 (success)
- */
+* main - program entry point
+* Return: 0 (success)
+*/
 int main(void)
 {
-int first, second;
+int first;
+int second;
+int combinations = 0;
 for (first = 0; first <= 99; first++)
 {
-for (second = first + 1; second <= 99; second++)
+for (second = 0; second <= 99; second++)
 {
-putchar(first / 10 + '0');
-putchar(first % 10 + '0');
-putchar(' ');
-putchar(second / 10 + '0');
-putchar(second % 10 + '0');
+if (first < second)
+{
+if (combinations > 0)
+{
 putchar(',');
 putchar(' ');
 }
+putchar((first / 10) + '0');
+putchar((first % 10) + '0');
+putchar(' ');
+putchar((second / 10) + '0');
+putchar((second % 10) + '0');
+combinations++;
 }
-return (0);
+}
+}
+putchar('\n');
+return 0;
 }
