@@ -8,6 +8,7 @@
 unsigned long find_even_fibonacci_sum(unsigned long limit);
 /**
  * main - entry point of the program
+ * Return: 0 (success)
  */
 int main(void)
 {
