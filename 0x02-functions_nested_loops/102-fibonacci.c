@@ -3,6 +3,7 @@
  * main - program's entry point
  * return: 0 (success)
  * @n: the number of fibonacci numbers
+ * print_fibonacci - function to print fibo
  */
 void print_fibonacci(int n);
 int main(void)
