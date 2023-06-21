@@ -11,6 +11,10 @@ int main(void)
 print_fibonacci(50);
 return (0);
 }
+/**
+ * print_fibonacci - Functiion to print fibo
+ * @n: the number of fibos
+ */
 void print_fibonacci(int n)
 {
 int i;
