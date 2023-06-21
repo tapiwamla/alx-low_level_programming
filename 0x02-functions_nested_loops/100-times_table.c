@@ -8,7 +8,9 @@ void print_times_table(int n)
   if (n > 15 || n < 0)
     return;
 
-  int row, column, product;
+  int row;
+  int column;
+  int product;
 
   for (row = 0; row <= n; row++)
     {
