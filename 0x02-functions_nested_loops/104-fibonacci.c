@@ -31,7 +31,7 @@ fib2 = fib_next;
  */
 int main(void)
 {
-int count = 98;
+int count = 1000;
 print_fibonacci_numbers(count);
 return (0);
 }
