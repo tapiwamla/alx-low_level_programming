@@ -6,7 +6,6 @@
  */
 void print_times_table(int n)
 {
-
     int row;
     int column;
     int product;
@@ -33,7 +32,6 @@ void print_times_table(int n)
                 _putchar(' ');
             }
             
-            // Print the product
             if (product < 10)
             {
                 _putchar(product + '0');
@@ -50,7 +48,6 @@ void print_times_table(int n)
                 _putchar((product % 10) + '0');
             }
             
-            // Add comma and space if it's not the last column
             if (column != n)
             {
                 _putchar(',');
