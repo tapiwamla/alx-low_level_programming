@@ -9,8 +9,10 @@ int fib1 = 1;
 int fib2 = 2;
 
 printf("%d, %d, ", fib1, fib2);
+
 int fib_next;
 int i;
+
 for (i = 3; i <= count; i++)
 {
 fib_next = fib1 + fib2;
