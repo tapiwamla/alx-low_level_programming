@@ -7,11 +7,10 @@ void print_fibonacci_numbers(int count)
 {
 int fib1 = 1;
 int fib2 = 2;
-
-printf("%d, %d, ", fib1, fib2);
-
 int fib_next;
 int i;
+
+printf("%d, %d, ", fib1, fib2);
 
 for (i = 3; i <= count; i++)
 {
