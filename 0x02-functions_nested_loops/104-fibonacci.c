@@ -5,9 +5,9 @@
  */
 void print_fibonacci_numbers(int count)
 {
-int fib1 = 1;
-int fib2 = 2;
-int fib_next;
+unsigned int fib1 = 1;
+unsigned int fib2 = 2;
+unsigned int fib_next;
 int i;
 
 printf("%d, %d, ", fib1, fib2);
