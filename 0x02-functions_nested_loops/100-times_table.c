@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * * print_times_table - Prints the n times table
- * * @n: The number to generate the times table for
- * */
+ * print_times_table - Prints the n times table
+ * @n: The number to generate the times table for
+ */
 void print_times_table(int n)
 {
 	int row;
