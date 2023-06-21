@@ -10,7 +10,8 @@ int fib2 = 2;
 
 printf("%d, %d, ", fib1, fib2);
 int fib_next;
-for (int i = 3; i <= count; i++)
+int i;
+for (i = 3; i <= count; i++)
 {
 fib_next = fib1 + fib2;
 printf("%d", fib_next);
