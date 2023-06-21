@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * * print_times_table - Prints the n times table
  * * @n: The number to generate the times table for
