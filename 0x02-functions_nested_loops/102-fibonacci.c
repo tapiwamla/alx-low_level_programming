@@ -2,6 +2,7 @@
 /**
  * main - program's entry point
  * return: 0 (success)
+ * @n: the number of fibonacci numbers
  */
 void print_fibonacci(int n);
 int main(void)
@@ -25,4 +26,4 @@ fib1 = fib2;
 fib2 = next;
 }
 printf("\n");
-} 
+}
