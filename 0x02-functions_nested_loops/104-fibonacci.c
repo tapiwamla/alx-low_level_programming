@@ -10,12 +10,12 @@ unsigned int fib2 = 2;
 unsigned int fib_next;
 int i;
 
-printf("%d, %d, ", fib1, fib2);
+printf("%u, %u, ", fib1, fib2);
 
 for (i = 3; i <= count; i++)
 {
 fib_next = fib1 + fib2;
-printf("%d", fib_next);
+printf("%u", fib_next);
 
 if (i < count)
 printf(", ");
