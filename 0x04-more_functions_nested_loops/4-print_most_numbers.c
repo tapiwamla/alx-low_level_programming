@@ -9,7 +9,7 @@ char num = '0';
 
 while (num <= '9')
 {
-if (num != 2 && num != 4)
+if (num != '2' && num != '4')
 {
 _putchar(num);
 }
