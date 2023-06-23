@@ -1,26 +1,33 @@
 #include "main.h"
 
 /**
-*print_square - draw a square on terminal
-*@n: number
-*
-*Return: (void)
+*print_square - print a square
+*@size: number
+*Return: void
 */
 
 void print_square(int size)
 {
+int count = 0, start;
+
 if (size <= 0)
 {
 _putchar('\n');
-return;
 }
 
-for (int row = 0; row < size; row++)
+else
 {
-for (int col = 0; col < size; col++)
+for (start = 0; start < size; start++)
+{
+while (count < size)
 {
 _putchar('#');
+count++;
 }
+count = 0;
+
 _putchar('\n');
+}
+
 }
 }
