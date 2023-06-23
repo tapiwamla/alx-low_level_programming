@@ -12,8 +12,8 @@ while (num <= '9')
 if (num != 2 && num != 4)
 {
 _putchar(num);
-num++;
 }
+num++;
 }
 _putchar('\n');
 }
