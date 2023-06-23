@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*print_line - draw a diagonal on terminal
+*print_diagonal - draw a diagonal on terminal
 *@n: number
 *
 *Return: (void)
