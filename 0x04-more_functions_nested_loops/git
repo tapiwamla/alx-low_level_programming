@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "FizzBuzz"
+git commit -m "Try-angle"
 git push
