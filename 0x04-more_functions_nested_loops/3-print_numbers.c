@@ -10,8 +10,8 @@ char num = '0';
 while (num <= '9')
 {
 _putchar(num);
-_putchar('\n');
 num++;
 }
+_putchar('\n');
 return;
 }
