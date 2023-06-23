@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "Print from 0 to 14"
+git commit -m "Straight line"
 git push
