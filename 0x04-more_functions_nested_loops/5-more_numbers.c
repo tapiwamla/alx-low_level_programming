@@ -18,8 +18,8 @@ _putchar(i % 10 + '0');
 i++;
 }
 i = 0;
+
 count++;
 }
-
 _putchar('\n');
 }
