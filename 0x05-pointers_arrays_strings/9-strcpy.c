@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* puts_half - copies the string
+* _strcpy - copies the string
 * @dest: copies to
 * @src: copies from
 * Return: void
