@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* puts_half - print n elements of an array
+* print_array - print n elements of int array
 * @a: the arr
 * @n: tot
 * Return: void
