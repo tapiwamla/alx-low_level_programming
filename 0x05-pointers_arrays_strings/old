@@ -1,0 +1,24 @@
+#include "main.h" 
+/** 
+* puts_half - print half of the string 
+* @str: the input
+* Return: void 
+*/
+void puts_half(char *str)
+{
+int len = 0;
+char *st = str;
+
+while (*str)
+len++;
+str++;
+}
+len  += 1;
+st += len / 2;
+while(*st) 
+{
+_putchar(*(st));
+st++;
+} 
+_putchar('\n');
+}
