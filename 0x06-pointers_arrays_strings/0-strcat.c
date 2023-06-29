@@ -5,7 +5,6 @@
  * @src: arg 2
  * Return: dest
  */
-
 char* _strcat(char* dest, char* src)
 {
 char* ptr = dest;
