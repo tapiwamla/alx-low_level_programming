@@ -13,10 +13,10 @@ int j;
 char separators[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '\"', '(', ')', '{', '}'};
 
 while (str[i] != '\0')
-{
+{        
 if (str[i] >= 'a' && str[i] <= 'z')
 {
-if (i == 0)
+    if (i == 0)
 {
 str[i] = str[i] - 'a' + 'A';
 }
