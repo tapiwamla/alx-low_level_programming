@@ -25,6 +25,7 @@ str[i] = str[i] - 'a' + 'A';
 else
 {
 j = 0;
+
 while (j <= 12)
 {
 if (separators[j] == str[i - 1])
