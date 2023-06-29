@@ -6,14 +6,7 @@
  * @s1: Pointer to the first string
  * @s2: Pointer to the second string
  *
- * Description:
- *   This function compares two strings character by character.
- *
- * Return:
- *   Returns an integer value indicating the comparison result.
- *   - If s1 is less than s2, it returns a negative value.
- *   - If s1 is greater than s2, it returns a positive value.
- *   - If s1 is equal to s2, it returns 0.
+ * Return: Integer
  */
 int _strcmp(char *s1, char *s2)
 {
