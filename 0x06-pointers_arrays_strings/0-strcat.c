@@ -6,7 +6,7 @@
  * Return: dest
  */
 char* _strcat(char* dest, char* src)
-{
+{   
 char* ptr = dest;
 
 while (*ptr != '\0')
