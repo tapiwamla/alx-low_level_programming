@@ -9,11 +9,13 @@ char* _strcat(char* dest, char* src)
 {
 char* ptr = dest;
 
-while (*ptr != '\0') {
+while (*ptr != '\0')
+{
 ptr++;
 }
 
-while (*src != '\0') {
+while (*src != '\0')
+{
 *ptr = *src;
 ptr++;
 src++;
