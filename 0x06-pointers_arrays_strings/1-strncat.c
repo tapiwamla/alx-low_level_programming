@@ -8,7 +8,7 @@
  *
  * Description:
  * Concatenates at most n bytes from src to the end of dest.
- * The src string does not need to be null-terminated if it contains n or more bytes.
+ * No need to null-terminate c if it contains n or more bytes.
  *
  * Return: Pointer to the resulting string dest
  */
