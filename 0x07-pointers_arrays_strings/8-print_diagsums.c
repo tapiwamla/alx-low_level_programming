@@ -10,15 +10,15 @@
 
 void print_diagsums(int *a, int size)
 {
-int i = 0;
+int i;
 int first_sum = 0;
 int second_sum = 0;
 
-for (; i < size; i++)
+for (i = 0; i < size; i++)
 {
 first_sum += a[i * size + i];
 }
-for (; i < size; i++)
+for (i = 0; i < size; i++)
 {
 second_sum += a[i * size + (size - 1 - i)];
 }
