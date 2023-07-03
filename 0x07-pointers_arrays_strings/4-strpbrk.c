@@ -23,6 +23,6 @@ return (s);
 pointer++;
 }
 s++;
-}
+ }
 return ('\0');
 }
