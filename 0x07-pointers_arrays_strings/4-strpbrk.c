@@ -11,15 +11,13 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-while (*s != '\0')
+while (*s)
 {
 char *pointer = accept;
-
 while (*pointer != '\0')
 {
 if (*pointer == *s)
 return (s);
-
 pointer++;
 }
 s++;
