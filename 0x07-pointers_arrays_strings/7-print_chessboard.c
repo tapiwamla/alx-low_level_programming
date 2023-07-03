@@ -8,12 +8,12 @@
 
 void print_chessboard(char (*a)[8])
 {
-int row = 0;
-int column = 0;
+int row;
+int column;
 
-for (; row < 8; row++)
+for (row = 0; row < 8; row++)
 {
-for (; column < 8; column++)
+for (column = 0; column < 8; column++)
 {
 _putchar(a[row][column]);
 }
