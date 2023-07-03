@@ -16,6 +16,6 @@ if (*s == c)
 return (s);
 s++;
 }
- 
+
 return ('\0');
 }
