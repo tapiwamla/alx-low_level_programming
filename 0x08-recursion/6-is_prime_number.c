@@ -20,7 +20,7 @@ return (prime_calc(i, n));
  *@j: int
  *Return: int
  */
- 
+
 int prime_calc(int i, int j)
 {
 
