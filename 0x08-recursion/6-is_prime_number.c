@@ -9,6 +9,7 @@
 int is_prime_number(int n)
 {
 int i = 1;
+int prime_calc(int i, int j);
 
 return (prime_calc(i, n));
 }
