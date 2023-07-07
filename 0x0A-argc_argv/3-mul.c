@@ -1,29 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
-* main - multiply 2 numbers
-* @argc: argument count
-* @argv: argument vector
-* Return: 0 (success)
-*/
+ *main - product of 2 numbers
+ *@argc: argument count
+ *@argv: argument vector
+ *Return: Always (0) Success
+ */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-int num1;
-int num2;
-int result;
-
+int count, num1, num2, product;
+char error[] = "Error";
 if (argc != 3)
 {
-printf("Error\n");
+printf("%s\n", error);
 return (1);
 }
-
-num1 = atoi(argv[1]);
+for (count = 0; count < argc; a++)
+{
+num1 = atoi(*(argv + 1));
 num2 = atoi(argv[2]);
-result = num1 * num2;
-
-printf("%d\n", result);
+}
+product = num1 * num2;
+printf("%d\n", product);
 return (0);
 }
