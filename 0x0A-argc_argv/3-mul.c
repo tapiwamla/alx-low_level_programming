@@ -14,7 +14,7 @@ int num1;
 int num2;
 int product;
 
-char error[] = "Error";
+char error[7] = "Error";
 if (argc != 3)
 {
 printf("%s\n", error);
