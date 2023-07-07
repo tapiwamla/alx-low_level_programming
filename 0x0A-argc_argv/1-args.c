@@ -1,14 +1,15 @@
 #include <stdio.h>
+
 /**
- * main - print number of arguments passed
- * @argc: argument count
- * @argv: argument vector
- * Return 0: (success)
- */
+* main - print number of arguments passed
+* @argc: argument count
+* @argv: argument vector
+* Return 0: (success)
+*/
 
 int main(int argc, char **argv)
 {
-(void)argv;
+(void) argv;
 
 printf("%d\n", argc - 1);
 
