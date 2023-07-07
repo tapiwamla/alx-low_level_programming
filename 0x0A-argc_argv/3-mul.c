@@ -11,8 +11,7 @@
 int main(int argc, char **argv)
 {
 
-int first;
-int second;
+int first, second;
 
 if (argc - 1 == 2)
 {
