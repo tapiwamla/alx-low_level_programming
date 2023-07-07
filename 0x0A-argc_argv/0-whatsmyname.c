@@ -9,7 +9,10 @@
 
 int main(int argc, char **argv)
 {
-char *str = argv[0];
+char *str;
+(void)argc;
+
+str = argv[0];
 
 while (*str != '\0')
 {
