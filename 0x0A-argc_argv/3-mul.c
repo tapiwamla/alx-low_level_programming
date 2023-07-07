@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
-* mul - multiply 2 numbers
+* main - multiply 2 numbers
 * @argc: argument count
 * @argv: argument vector
-* Return: product
+* Return: 0 (success)
 */
 
 int main(int argc, char **argv)
