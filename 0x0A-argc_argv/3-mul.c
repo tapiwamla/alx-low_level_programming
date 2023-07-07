@@ -10,7 +10,6 @@
 
 int main(int argc, char **argv)
 {
-
 int first, second;
 
 if (argc - 1 == 2)
@@ -28,5 +27,3 @@ return (1);
 
 return (0);
 }
-
-
