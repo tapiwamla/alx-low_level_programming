@@ -1,31 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- *main - product of 2 numbers
- *@argc: argument count
- *@argv: argument vector
- *Return: Always (0) Success
- */
+*main -  multiplies two numbers
+*@argc: argument count
+*@argv: argument vector
+*Return: 0 (success)
+*/
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-int count;
-int num1;
-int num2;
-int product;
 
-char error[10] = "Error";
-if (argc != 3)
+int first;
+int second;
+
+if (argc - 1 == 2)
 {
-printf("%s\n", error);
+first = atoi(argv[1]);
+second = atoi(argv[2]);
+
+printf("%d\n", first * second);
+}
+else
+{
+printf("Error\n");
 return (1);
 }
-for (count = 0; count < argc; count++)
-{
-num1 = atoi(*(argv + 1));
-num2 = atoi(argv[2]);
-}
-product = num1 * num2;
-printf("%d\n", product);
+
 return (0);
 }
