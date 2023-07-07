@@ -2,28 +2,29 @@
 #include <stdlib.h>
 
 /**
-*main - multiplies two numbers
-*@argc: argument count
-*@argv: argument vector
-*Return: 0 (success)
-*/
+ * main - multiplies 2 numbers
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 (Success) or 1 (Error)
+ */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-int first, second;
+int product, first, second;
 
-if (argc - 1 == 2)
-{
-first = atoi(argv[1]);
-second = atoi(argv[2]);
-
-printf("%d\n", first * second);
-}
-else
+if (argc < 3 || argc > 3)
 {
 printf("Error\n");
 return (1);
 }
 
+first = atoi(argv[1]);
+second = atoi(argv[2]);
+product = first * second;
+
+printf("%d\n", product);
+
 return (0);
 }
+
