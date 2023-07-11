@@ -42,7 +42,7 @@ return (NULL);
 for (i = 0; i < height; i++)
 {
 for (j = 0; j < width; j++)
-mjarr[i][j] = 0;
+myarr[i][j] = 0;
 }
 
 return (myarr);
