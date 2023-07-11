@@ -19,7 +19,7 @@ return (NULL);
 
 for (size = 0; str[size] != '\0'; size++)
 {
-copy = malloc(size + 1 * sizeof(*str));
+copy = malloc((size * sizeof(*str)) + 1);
 
 if (copy == 0)
 return (NULL);
