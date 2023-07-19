@@ -1,8 +1,8 @@
 #include "function_pointers.h"
 /**
- * int_index - search int 
+ * int_index - search index
  * @array: array
- * @size: elements[](n)
+ * @size: elements n
  * @cmp: function pointer
  * Return: 0 (success)
  */
@@ -20,3 +20,4 @@ return (i);
 }
 return (-1);
 }
+
