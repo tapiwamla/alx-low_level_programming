@@ -2,26 +2,26 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-/**
- * print_numbers - print numbers, followed by new line.
- * @separator: number separator (string).
- * @n: integers (n).
- * @...: variable size.
- */
 
+/**
+ * print_strings - print strings, followed by a new line.
+ * @separator: the string to be printed.
+ * @n: The number of strings passed to the function.
+ * @...: A variable number of strings to be printed.
+ */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-va_list strings;
+va_list vs;
 char *str;
 unsigned int x;
 
 
-va_start(strings, n);
+va_start(vs, n);
 
 
 for (x = 0; x < n; x++)
 {
-str = va_arg(strings, char *);
+str = va_arg(vs, char *);
 
 
 if (str == NULL)
@@ -38,6 +38,6 @@ printf("%s", separator);
 printf("\n");
 
 
-va_end(strings);
+va_end(vs);
 }
 
