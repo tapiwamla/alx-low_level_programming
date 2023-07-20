@@ -13,7 +13,7 @@ int i = 0;
 char *str, *sep = "";
 
 
-va_vl vl;
+va_list vl;
 
 
 va_start(vl, format);
