@@ -13,7 +13,7 @@ size_t size = 0;
 while (h)
 {
 size++;
-h = h -> next;
+h = h->next;
 }
 return (size);
 }
