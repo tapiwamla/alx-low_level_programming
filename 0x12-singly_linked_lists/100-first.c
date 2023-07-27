@@ -2,7 +2,9 @@
 
 void first(void) __attribute__ ((constructor));
 
-/* first - print a sentence before executing main */
+/**
+ * first - print a sentence before executing main
+ * /
 
 void first(void)
 {
