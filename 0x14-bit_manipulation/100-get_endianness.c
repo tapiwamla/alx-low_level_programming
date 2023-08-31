@@ -14,7 +14,7 @@ char *character;
 index = 1;
 
 /* Set character to index. */
-*character = (char *) &index;
+character = (char *) &index;
 
 return (*character);
 }
