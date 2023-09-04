@@ -10,19 +10,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-/* Custom dprintf function. */
-int _dprintf(int fd, const char *format, ...)
-{
-int result;
-va_list args;
-va_start(args, format);
-
-result = vdprintf(fd, format, args);
-
-va_end(args);
-return result;
-}
-
 /* Include ALX function prototypes. */
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
