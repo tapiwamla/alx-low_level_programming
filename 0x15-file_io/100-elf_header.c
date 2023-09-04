@@ -119,43 +119,43 @@ void print_data(unsigned char *e_ident)
  */
 void print_osabi(unsigned char *e_ident)
 {
-printf(" OS/ABI: ");
+	printf(" OS/ABI: ");
 
-switch (e_ident[EI_OSABI])
-{
-case ELFOSABI_NONE:
-printf("UNIX - System V\n");
-break;
-case ELFOSABI_HPUX:
-printf("UNIX - HP-UX\n");
-break;
-case ELFOSABI_NETBSD:
-printf("UNIX - NetBSD\n");
-break;
-case ELFOSABI_LINUX:
-printf("UNIX - Linux\n");
-break;
-case ELFOSABI_SOLARIS:
-printf("UNIX - Solaris\n");
-break;
-case ELFOSABI_IRIX:
-printf("UNIX - IRIX\n");
-break;
-case ELFOSABI_FREEBSD:
-printf("UNIX - FreeBSD\n");
-break;
-case ELFOSABI_TRU64:
-printf("UNIX - TRU64\n");
-break;
-case ELFOSABI_ARM:
-printf("ARM\n");
-break;
-case ELFOSABI_STANDALONE:
-printf("Standalone App\n");
-break;
-default:
-printf("<unknown: %x>\n", e_ident[EI_OSABI]);
-}
+	switch (e_ident[EI_OSABI])
+	{
+	case ELFOSABI_NONE:
+		printf("UNIX - System V\n");
+		break;
+	case ELFOSABI_HPUX:
+		printf("UNIX - HP-UX\n");
+		break;
+	case ELFOSABI_NETBSD:
+		printf("UNIX - NetBSD\n");
+		break;
+	case ELFOSABI_LINUX:
+		printf("UNIX - Linux\n");
+		break;
+	case ELFOSABI_SOLARIS:
+		printf("UNIX - Solaris\n");
+		break;
+	case ELFOSABI_IRIX:
+		printf("UNIX - IRIX\n");
+		break;
+	case ELFOSABI_FREEBSD:
+		printf("UNIX - FreeBSD\n");
+		break;
+	case ELFOSABI_TRU64:
+		printf("UNIX - TRU64\n");
+		break;
+	case ELFOSABI_ARM:
+		printf("ARM\n");
+		break;
+	case ELFOSABI_STANDALONE:
+		printf("Standalone App\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
+	}
 }
 
 
@@ -165,18 +165,18 @@ printf("<unknown: %x>\n", e_ident[EI_OSABI]);
  */
 void print_version(unsigned char *e_ident)
 {
-printf(" Version: %d",
-e_ident[EI_VERSION]);
+	 printf(" Version: %d",
+			  e_ident[EI_VERSION]);
 
-switch (e_ident[EI_VERSION])
-{
-case EV_CURRENT:
-printf(" (current)\n");
-break;
-default:
-printf("\n");
-break;
-}
+	switch (e_ident[EI_VERSION])
+	{
+	case EV_CURRENT:
+		printf(" (current)\n");
+		break;
+	default:
+		printf("\n");
+		break;
+	}
 }
 
 
@@ -275,11 +275,10 @@ void close_elf(int elf)
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-	int o_pen;
-    int r_ead;
+	int o, r;
 
-	o_pen = open(argv[1], O_RDONLY);
-	if (o_pen == -1)
+	o = open(argv[1], O_RDONLY);
+	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
@@ -287,15 +286,15 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
-		close_elf(o_pen);
+		close_elf(o);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	r_ead = read(o_pen, header, sizeof(Elf64_Ehdr));
-	if (r_ead == -1)
+	r = read(o, header, sizeof(Elf64_Ehdr));
+	if (r == -1)
 	{
 		free(header);
-		close_elf(o_pen);
+		close_elf(o);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
@@ -312,7 +311,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
-	close_elf(o_pen);
+	close_elf(o);
 	return (0);
 }
 
