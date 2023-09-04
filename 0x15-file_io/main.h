@@ -9,6 +9,9 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <string.h>
+#include <errno.h>
+#include <stdint.h>
 
 /* Custom dprintf function. */
 int _dprintf(int fd, const char *format, ...)
