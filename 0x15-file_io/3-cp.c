@@ -64,6 +64,7 @@ char *buffer;
 if (argc != 3)
 {
 _dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+
 exit(97);
 }
 
@@ -76,32 +77,17 @@ file_from = open(argv[1], O_RDONLY);
 /* Read the contents of the file to be copied from. */
 file_read = read(file_from, buffer, 1024);
 
-/* Open the file to be copied to with 664 permissions. */
+/* Open the file to be copied to. */
 file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-/* Check if the file was opened successfully. */
-if (file_to == -1)
-{
-_dprintf(STDERR_FILENO, "Error: Can't open or create file %s\n", argv[2]);
-free(buffer);
-exit(99);
-}
-
-/* Set the file permissions to rw-rw-r-- (664). */
-if (chmod(argv[2], 0664) == -1)
-{
-_dprintf(STDERR_FILENO, "Error: Can't set permissions for file %s\n", argv[2]);
-free(buffer);
-exit(99);
-}
-
 /* Write the contents of the file to be copied to. */
-do
-{
+do {
 if (file_from == -1 || file_read == -1)
 {
 _dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+
 free(buffer);
+
 exit(98);
 }
 
@@ -111,7 +97,9 @@ file_write = write(file_to, buffer, file_read);
 if (file_to == -1 || file_write == -1)
 {
 _dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+
 free(buffer);
+
 exit(99);
 }
 
