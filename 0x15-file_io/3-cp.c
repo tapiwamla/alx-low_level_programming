@@ -19,7 +19,7 @@ this_buffer = malloc(sizeof(char) * 1024);
 /* If malloc fails, error and exit with NULL. */
 if (this_buffer == NULL)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+_dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 
 exit(99);
 }
@@ -63,7 +63,7 @@ char *buffer;
 /* If the number of arguments is incorrect, error and exit with 97 (usage). */
 if (argc != 3)
 {
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+_dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 
 exit(97);
 }
@@ -84,7 +84,7 @@ file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 do {
 if (file_from == -1 || file_read == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+_dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 
 free(buffer);
 
@@ -96,7 +96,7 @@ file_write = write(file_to, buffer, file_read);
 /* If writing fails, error and exit with 99 (cannot write to). */
 if (file_to == -1 || file_write == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+_dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 
 free(buffer);
 
