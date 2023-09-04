@@ -20,7 +20,6 @@ this_buffer = malloc(sizeof(char) * 1024);
 if (this_buffer == NULL)
 {
 _dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-
 exit(99);
 }
 
@@ -42,7 +41,6 @@ custom_close = close(fd);
 if (custom_close == -1)
 {
 _dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-
 exit(100);
 }
 }
@@ -85,9 +83,7 @@ do {
 if (file_from == -1 || file_read == -1)
 {
 _dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-
 free(buffer);
-
 exit(98);
 }
 
@@ -97,9 +93,7 @@ file_write = write(file_to, buffer, file_read);
 if (file_to == -1 || file_write == -1)
 {
 _dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-
 free(buffer);
-
 exit(99);
 }
 
@@ -112,9 +106,7 @@ file_to = open(argv[2], O_WRONLY | O_APPEND);
 
 /* Avoid memory leaks and close the files. */
 free(buffer);
-
 close_this_file(file_from);
-
 close_this_file(file_to);
 
 return (0);
