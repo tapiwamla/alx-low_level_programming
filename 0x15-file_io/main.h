@@ -11,10 +11,9 @@
 #include <sys/stat.h>
 
 /* Custom dprintf. */
-int result;
-
 int _dprintf(int fd, const char *format, ...)
 {
+int result;
 va_list args;
 va_start(args, format);
 
