@@ -41,7 +41,7 @@ custom_close = close(fd);
 /* If closing the file fails, error and exit with 100. */
 if (custom_close == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+_dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 
 exit(100);
 }
