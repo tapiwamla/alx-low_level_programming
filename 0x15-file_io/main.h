@@ -14,6 +14,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <errno.h>
+#include <elf.h>
 
 /* Custom dprintf function. */
 int _dprintf(int fd, const char *format, ...)
