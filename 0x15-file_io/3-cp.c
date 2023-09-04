@@ -62,7 +62,6 @@ char *buffer;
 if (argc != 3)
 {
 _dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-
 exit(97);
 }
 
