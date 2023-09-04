@@ -12,6 +12,7 @@
 #include <string.h>
 #include <errno.h>
 #include <stdint.h>
+#include <elf.h>
 
 /* Custom dprintf function. */
 int _dprintf(int fd, const char *format, ...)
