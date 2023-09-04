@@ -10,7 +10,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-/* Custom dprintf. */
+/* Custom dprintf function. */
 int _dprintf(int fd, const char *format, ...)
 {
 int result;
