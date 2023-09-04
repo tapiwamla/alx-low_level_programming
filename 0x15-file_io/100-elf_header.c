@@ -60,7 +60,7 @@ printf(" ");
  */
 void print_file_class(unsigned char *e_ident)
 {
-printf(" Class: ");
+printf(" Class:                             ");
 
 switch (e_ident[EI_CLASS])
 {
@@ -84,7 +84,7 @@ printf("<unknown: %x>\n", e_ident[EI_CLASS]);
  */
 void print_data_encoding(unsigned char *e_ident)
 {
-printf(" Data: ");
+printf(" Data:                              ");
 
 switch (e_ident[EI_DATA])
 {
@@ -108,7 +108,7 @@ printf("<unknown: %x>\n", e_ident[EI_CLASS]);
  *    */
 void print_file_version(unsigned char *e_ident)
 {
-printf(" Version: %d",
+printf(" Version:                           %d",
 e_ident[EI_VERSION]);
 
 switch (e_ident[EI_VERSION])
@@ -128,7 +128,7 @@ break;
  */
 void print_os_abi(unsigned char *e_ident)
 {
-printf(" OS/ABI: ");
+printf(" OS/ABI:                            ");
 
 switch (e_ident[EI_OSABI])
 {
