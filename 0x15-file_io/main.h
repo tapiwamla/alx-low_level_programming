@@ -10,6 +10,11 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+/* Additional libraries for elf header. */
+#include <stdint.h>
+#include <string.h>
+#include <errno.h>
+
 /* Custom dprintf function. */
 int _dprintf(int fd, const char *format, ...)
 {
