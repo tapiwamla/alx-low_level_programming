@@ -48,3 +48,23 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	return (1);
 }
 
+/**
+ * len_node - to get the length of the list.
+ * @node: a pointer to the head of the list.
+ * Return: the length of the list.
+ */
+unsigned int len_node(dlistint_t **node)
+{
+	unsigned int len = 0;
+	dlistint_t *start;
+
+	start = *node;
+
+	while (start != NULL)
+	{
+		len += 1;
+		start = start->next;
+	}
+	return (len);
+}
+
